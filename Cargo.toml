@@ -1,0 +1,12 @@
+[package]
+name = "test-operator-list-targets"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+kube = { git = "https://github.com/metalbear-co/kube", default-features = false, features = ["rustls-tls", "derive"] }
+mirrord-operator = { git = "https://github.com/metalbear-co/mirrord.git", package = "mirrord-operator", commit = "edff329b5c9494294193d4ef6d4a7359b70690d7", features = ["crd"] }
+
+tokio = { version = "1.35.1", features = ["rt"] }
